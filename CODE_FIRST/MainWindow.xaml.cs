@@ -1,4 +1,5 @@
 ﻿using CODE_FIRST.DAO;
+using CODE_FIRST.MODEL;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,7 +42,10 @@ namespace CODE_FIRST
             //manager.ImportProductLines();
             //OK
             //manager.ImportProducts();
-            manager.ImportOrderDetails();
+            //manager.ImportOrderDetails();
+
+            List<Customers> customerList = manager.ListCustomers();
+            dgList.ItemsSource = customerList;
         }
 
     }

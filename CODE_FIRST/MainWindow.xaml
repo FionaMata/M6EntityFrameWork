@@ -13,20 +13,14 @@
             <TabItem Header="Create/Updated/Delete">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
 
 
+                    <DataGrid Name="dgList" Grid.Row="1" AutoGenerateColumns="True">
 
+                    </DataGrid>
                 </Grid>
             </TabItem>
 
