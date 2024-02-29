@@ -16,10 +16,24 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
+                    <StackPanel Grid.Column="0" Grid.Row="0" Margin="10">
+                        <TextBlock Text="SELECTS "/>
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox Name="cbSelects" SelectionChanged="cbSelects_SelectionChanged"  Width="300">
+                                <ComboBoxItem Content="List Customers"/>
+                                <ComboBoxItem Content="List Products"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
 
-                    <DataGrid Name="dgList" Grid.Row="1" AutoGenerateColumns="True">
-
+                    <DataGrid Name="dgList" Grid.Row="1" AutoGenerateColumns="True" 
+                              IsReadOnly="True" HorizontalScrollBarVisibility="Visible" ColumnWidth="120">
+                        
                     </DataGrid>
                 </Grid>
             </TabItem>

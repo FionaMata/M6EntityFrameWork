@@ -42,11 +42,25 @@ namespace CODE_FIRST
             //manager.ImportProductLines();
             //OK
             //manager.ImportProducts();
+            //OK
             //manager.ImportOrderDetails();
-
-            List<Customers> customerList = manager.ListCustomers();
-            dgList.ItemsSource = customerList;
         }
 
+
+        private void cbSelects_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(cbSelects.SelectedIndex == 0)
+            {
+                List<Customers> customerList = manager.ListCustomers();
+                dgList.ItemsSource = customerList;
+                dgList.Columns[12].Visibility = Visibility.Hidden;
+                dgList.Columns[14].Visibility = Visibility.Hidden;
+                dgList.Columns[15].Visibility = Visibility.Hidden;
+            }
+            else if (cbSelects.SelectedIndex == 1)
+            {
+
+            }
+        }
     }
 }
