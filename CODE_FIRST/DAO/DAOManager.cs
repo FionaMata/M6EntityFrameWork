@@ -350,8 +350,10 @@ namespace CODE_FIRST.DAO
             return done;
         }
 
-        //
-
-
+        public List<Customers> ListCustomers()
+        {
+            var customers = dbContext.Customers.ToList();
+            return customers;
+        }
     }
 }

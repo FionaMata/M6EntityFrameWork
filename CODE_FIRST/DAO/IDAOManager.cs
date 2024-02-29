@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CODE_FIRST.MODEL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace CODE_FIRST.DAO
         public bool ImportProducts();
         public bool ImportOrders();
         public bool ImportOrderDetails();
-
+        public List<Customers> ListCustomers();
 
 
     }
