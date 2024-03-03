@@ -1,4 +1,5 @@
 ﻿using CODE_FIRST.DAO;
+using CODE_FIRST.MODEL;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,8 +42,25 @@ namespace CODE_FIRST
             //manager.ImportProductLines();
             //OK
             //manager.ImportProducts();
-            manager.ImportOrderDetails();
+            //OK
+            //manager.ImportOrderDetails();
         }
 
+
+        private void cbSelects_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(cbSelects.SelectedIndex == 0)
+            {
+                List<Customers> customerList = manager.ListCustomers();
+                dgList.ItemsSource = customerList;
+                dgList.Columns[12].Visibility = Visibility.Hidden;
+                dgList.Columns[14].Visibility = Visibility.Hidden;
+                dgList.Columns[15].Visibility = Visibility.Hidden;
+            }
+            else if (cbSelects.SelectedIndex == 1)
+            {
+
+            }
+        }
     }
 }

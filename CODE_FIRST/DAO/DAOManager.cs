@@ -349,5 +349,11 @@ namespace CODE_FIRST.DAO
             }
             return done;
         }
+
+        public List<Customers> ListCustomers()
+        {
+            var customers = dbContext.Customers.OrderByDescending(c=>c.customerName).ToList();
+            return customers;
+        }
     }
 }
